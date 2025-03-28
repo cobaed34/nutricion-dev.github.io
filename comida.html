@@ -8,72 +8,86 @@
 </head>
 <body>
     <div class="biochem-container">
-        <nav class="breadcrumb">
-            <a href="bioquimica.html">← Volver a Bioquímica</a>
+        <nav aria-label="Migas de pan" class="breadcrumb">
+            <a href="bioquimica.html">&larr; Volver a Bioquímica</a>
         </nav>
 
-        <section class="biochem-section">
-            <h2>Alimentos que contienen Sacarosa</h2>
-            <div class="info-card">
-                <h3>Fuentes naturales de Sacarosa</h3>
-                <div class="food-grid">
-                    <div class="food-card">
-                        <img src="img/cana-azucar.jpg" alt="Caña de azúcar" class="food-image">
-                        <h4>Caña de azúcar</h4>
-                        <p>Principal fuente de sacarosa comercial</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/remolacha.jpg" alt="Remolacha azucarera" class="food-image">
-                        <h4>Remolacha azucarera</h4>
-                        <p>Segunda fuente más importante de sacarosa</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/datiles.jpg" alt="Dátiles" class="food-image">
-                        <h4>Dátiles</h4>
-                        <p>Alto contenido natural de sacarosa</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/miel.jpg" alt="Miel" class="food-image">
-                        <h4>Miel</h4>
-                        <p>Contiene sacarosa natural</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/jarabe-arce.jpg" alt="Jarabe de arce" class="food-image">
-                        <h4>Jarabe de arce</h4>
-                        <p>Endulzante natural rico en sacarosa</p>
+        <main>
+            <!-- Sección de Sacarosa -->
+            <section class="biochem-section" aria-labelledby="sacarosa-heading">
+                <h2 id="sacarosa-heading">Alimentos que contienen Sacarosa</h2>
+                
+                <div class="info-card">
+                    <h3>Fuentes naturales de Sacarosa</h3>
+                    
+                    <div class="food-grid" role="list">
+                        <div class="food-card" role="listitem">
+                            <img src="img/cana.png" alt="Caña de azúcar" class="food-image">
+                            <h4>Caña de azúcar</h4>
+                            <p>Principal fuente de sacarosa comercial</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/remo.png" alt="Remolacha azucarera" class="food-image">
+                            <h4>Remolacha azucarera</h4>
+                            <p>Segunda fuente más importante de sacarosa</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/datiles.png" alt="Dátiles" class="food-image">
+                            <h4>Dátiles</h4>
+                            <p>Contienen aproximadamente 80% de sacarosa natural</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/miel.webp" alt="Miel en panal" class="food-image">
+                            <h4>Miel</h4>
+                            <p>Contiene 1-5% de sacarosa natural</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/jarabe.png" alt="Jarabe de arce en botella" class="food-image">
+                            <h4>Jarabe de arce</h4>
+                            <p>Contiene 60-70% de sacarosa</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <h3>Alimentos procesados con Sacarosa</h3>
-                <div class="food-grid">
-                    <div class="food-card">
-                        <img src="img/panaderia.jpg" alt="Productos de panadería" class="food-image">
-                        <h4>Productos de panadería</h4>
-                        <p>Pasteles, galletas y panes dulces</p>
+            <!-- Sección de Lactosa -->
+            <section class="biochem-section" aria-labelledby="lactosa-heading">
+                <h2 id="lactosa-heading">Alimentos que contienen Lactosa</h2>
+                
+                <div class="info-card">
+                    <h3>Fuentes naturales de Lactosa</h3>
+                    
+                    <div class="food-grid" role="list">
+                        <div class="food-card" role="listitem">
+                            <img src="img/leche.png" alt="Leche de vaca en vaso" class="food-image">
+                            <h4>Leche animal</h4>
+                            <p>Contiene 4.8% de lactosa en promedio</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/yogur.png" alt="Yogur natural en recipiente" class="food-image">
+                            <h4>Yogures</h4>
+                            <p>Contenido reducido (3-4%) por fermentación</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/queso.png" alt="Quesos frescos" class="food-image">
+                            <h4>Quesos frescos</h4>
+                            <p>Hasta 2.5% de lactosa</p>
+                        </div>
+                        
+                        <div class="food-card" role="listitem">
+                            <img src="img/crema.png" alt="Crema de leche" class="food-image">
+                            <h4>Crema de leche</h4>
+                            <p>Contiene 2-3% de lactosa</p>
+                        </div>
                     </div>
-                    <div class="food-card">
-                        <img src="img/dulces.jpg" alt="Dulces y caramelos" class="food-image">
-                        <h4>Dulces y caramelos</h4>
-                        <p>Alto contenido de sacarosa añadida</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/bebidas.jpg" alt="Bebidas azucaradas" class="food-image">
-                        <h4>Bebidas azucaradas</h4>
-                        <p>Refrescos y jugos procesados</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/postres.jpg" alt="Postres" class="food-image">
-                        <h4>Postres</h4>
-                        <p>Diversos postres y dulces</p>
-                    </div>
-                    <div class="food-card">
-                        <img src="img/mermeladas.jpg" alt="Mermeladas y jaleas" class="food-image">
-                        <h4>Mermeladas y jaleas</h4>
-                        <p>Conservas dulces de frutas</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
 </body>
-</html> 
+</html>

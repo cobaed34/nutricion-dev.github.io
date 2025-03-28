@@ -975,3 +975,335 @@ sup {
     vertical-align: super;
     font-size: smaller;
 }
+
+.solubility-info {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.solubility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.solubility-card {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.solubility-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.5rem;
+}
+
+.solubility-card ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.solubility-card li {
+    margin: 0.5rem 0;
+}
+
+.insoluble {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-left: 4px solid var(--primary-color);
+}
+
+.soluble {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-left: 4px solid var(--accent-color);
+}
+
+.lipid-structure {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.structure-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.structure-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.chemical-structure {
+    text-align: center;
+}
+
+.structure-img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.structure-caption {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.functional-groups, .bond-types {
+    list-style: none;
+    padding: 0;
+}
+
+.functional-groups li, .bond-types li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.functional-groups li:before, .bond-types li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.lipid-types {
+    margin: 2rem 0;
+}
+
+.saturated-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.definition-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.classification-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.fat-card, .properties-card, .sources-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fat-types {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fat-type h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+}
+
+.fat-type ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fat-type li {
+    margin: 0.8rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.source {
+    display: block;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    margin-top: 0.3rem;
+}
+
+.properties-list {
+    list-style: none;
+    padding: 0;
+}
+
+.properties-list li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.properties-list li:before {
+    content: "✓";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.source-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.source-group h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.source-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.source-group li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.source-group li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.saturated-lipids {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.saturated-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 1rem;
+}
+
+.saturated-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.saturated-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.lipid-tables {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.lipid-table-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lipid-table-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.lipid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.lipid-table th, 
+.lipid-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.lipid-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.lipid-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.lipid-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+.properties-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--accent-color);
+}
+
+.properties-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.properties-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.properties-box li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.properties-box li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
