@@ -3,90 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentos</title>
+    <meta name="description" content="Información sobre alimentos con diferentes tipos de azúcares">
+    <title>Alimentos - Información nutricional</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="biochem-container">
+    <div class="biochem-container" id="app">
         <nav aria-label="Migas de pan" class="breadcrumb">
             <a href="bioquimica.html">&larr; Volver a Bioquímica</a>
         </nav>
 
+        <header>
+            <h1>Bioquímica de los alimentos</h1>
+            <div class="controls">
+                <label for="sugar-filter">Filtrar por tipo de azúcar:</label>
+                <select id="sugar-filter" aria-label="Filtrar alimentos por tipo de azúcar">
+                    <option value="all">Todos los azúcares</option>
+                    <option value="sacarosa">Sacarosa</option>
+                    <option value="lactosa">Lactosa</option>
+                    <option value="maltosa">Maltosa</option>
+                </select>
+            </div>
+        </header>
+
         <main>
-       
-            <section class="biochem-section" aria-labelledby="sacarosa-heading">
+            <section class="biochem-section" aria-labelledby="sacarosa-heading" data-sugar-type="sacarosa">
                 <h2 id="sacarosa-heading">Alimentos que contienen Sacarosa</h2>
                 
                 <div class="info-card">
                     <h3>Fuentes naturales de Sacarosa</h3>
                     
                     <div class="food-grid" role="list">
-                        <div class="food-card" role="listitem">
-                            <img src="img/cana.webp" alt="Caña de azúcar" class="food-image">
+                        <!-- Datos estructurados para alimentos con sacarosa -->
+                        <div class="food-card" role="listitem" data-percentage="90">
+                            <img src="img/cana.webp" alt="Caña de azúcar" class="food-image" loading="lazy">
                             <h4>Caña de azúcar</h4>
                             <p>Principal fuente de sacarosa comercial</p>
+                            <div class="food-details">
+                                <span class="percentage">90% de sacarosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/remo.webp" alt="Remolacha azucarera" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="85">
+                            <img src="img/remo.webp" alt="Remolacha azucarera" class="food-image" loading="lazy">
                             <h4>Remolacha azucarera</h4>
                             <p>Segunda fuente más importante de sacarosa</p>
+                            <div class="food-details">
+                                <span class="percentage">85% de sacarosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/datiles.webp" alt="Dátiles" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="80">
+                            <img src="img/datiles.webp" alt="Dátiles" class="food-image" loading="lazy">
                             <h4>Dátiles</h4>
                             <p>Contienen aproximadamente 80% de sacarosa natural</p>
+                            <div class="food-details">
+                                <span class="percentage">80% de sacarosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/miel.png" alt="Miel en panal" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="5">
+                            <img src="img/miel.png" alt="Miel en panal" class="food-image" loading="lazy">
                             <h4>Miel</h4>
                             <p>Contiene 1-5% de sacarosa natural</p>
+                            <div class="food-details">
+                                <span class="percentage">1-5% de sacarosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/jarabe.webp" alt="Jarabe de arce en botella" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="65">
+                            <img src="img/jarabe.webp" alt="Jarabe de arce en botella" class="food-image" loading="lazy">
                             <h4>Jarabe de arce</h4>
                             <p>Contiene 60-70% de sacarosa</p>
+                            <div class="food-details">
+                                <span class="percentage">60-70% de sacarosa</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="biochem-section" aria-labelledby="lactosa-heading">
+            <section class="biochem-section" aria-labelledby="lactosa-heading" data-sugar-type="lactosa">
                 <h2 id="lactosa-heading">Alimentos que contienen Lactosa</h2>
                 
                 <div class="info-card">
                     <h3>Fuentes naturales de Lactosa</h3>
                     
                     <div class="food-grid" role="list">
-                        <div class="food-card" role="listitem">
-                            <img src="img/leche.webp" alt="Leche de vaca en vaso" class="food-image">
+                        <!-- Datos estructurados para alimentos con lactosa -->
+                        <div class="food-card" role="listitem" data-percentage="4.8">
+                            <img src="img/leche.webp" alt="Leche de vaca en vaso" class="food-image" loading="lazy">
                             <h4>Leche animal</h4>
                             <p>Contiene 4.8% de lactosa en promedio</p>
+                            <div class="food-details">
+                                <span class="percentage">4.8% de lactosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/yogurt.webp" alt="Yogur natural en recipiente" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="3.5">
+                            <img src="img/yogurt.webp" alt="Yogur natural en recipiente" class="food-image" loading="lazy">
                             <h4>Yogures</h4>
                             <p>Contenido reducido (3-4%) por fermentación</p>
+                            <div class="food-details">
+                                <span class="percentage">3-4% de lactosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/queso.webp" alt="Quesos frescos" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="2.5">
+                            <img src="img/queso.webp" alt="Quesos frescos" class="food-image" loading="lazy">
                             <h4>Quesos frescos</h4>
                             <p>Hasta 2.5% de lactosa</p>
+                            <div class="food-details">
+                                <span class="percentage">2.5% de lactosa</span>
+                            </div>
                         </div>
                         
-                        <div class="food-card" role="listitem">
-                            <img src="img/crema.webp" alt="Crema de leche" class="food-image">
+                        <div class="food-card" role="listitem" data-percentage="2.5">
+                            <img src="img/crema.webp" alt="Crema de leche" class="food-image" loading="lazy">
                             <h4>Crema de leche</h4>
                             <p>Contiene 2-3% de lactosa</p>
+                            <div class="food-details">
+                                <span class="percentage">2-3% de lactosa</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="biochem-section" aria-labelledby="maltosa-heading" data-sugar-type="maltosa">
+                <h2 id="maltosa-heading">Alimentos que contienen Maltosa</h2>
+                
+                <div class="info-card">
+                    <h3>Fuentes naturales de Maltosa</h3>
+                    
+                    <div class="food-grid" role="list">
+                        <!-- Datos estructurados para alimentos con maltosa -->
+                        <div class="food-card" role="listitem" data-percentage="7">
+                            <img src="img/cebada-gen.png" alt="Cebada germinada" class="food-image" loading="lazy">
+                            <h4>Cebada germinada</h4>
+                            <p>Importante fuente de maltosa en la elaboración de cerveza</p>
+                            <div class="food-details">
+                                <span class="percentage">5-9% de maltosa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" role="listitem" data-percentage="5">
+                            <img src="img/cerveza-removebg-preview.png" alt="Cerveza" class="food-image" loading="lazy">
+                            <h4>Cerveza</h4>
+                            <p>Contiene maltosa residual tras la fermentación</p>
+                            <div class="food-details">
+                                <span class="percentage">3-7% de maltosa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" role="listitem" data-percentage="3">
+                            <img src="img/cereales-removebg-preview.png" alt="Cereales germinados" class="food-image" loading="lazy">
+                            <h4>Cereales germinados</h4>
+                            <p>El proceso de germinación produce maltosa</p>
+                            <div class="food-details">
+                                <span class="percentage">2-4% de maltosa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" role="listitem" data-percentage="2">
+                            <img src="img/pan-removebg-preview.png" alt="Pan recién horneado" class="food-image" loading="lazy">
+                            <h4>Pan y productos horneados</h4>
+                            <p>La fermentación produce pequeñas cantidades de maltosa</p>
+                            <div class="food-details">
+                                <span class="percentage">1-3% de maltosa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <footer>
+            <p>© 2025 - Información bioquímica de alimentos</p>
+        </footer>
     </div>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM importantes
+            const sugarFilter = document.getElementById('sugar-filter');
+            const sections = document.querySelectorAll('.biochem-section');
+            const foodCards = document.querySelectorAll('.food-card');
+            
+            // Función para filtrar por tipo de azúcar
+            function filterBySugarType(sugarType) {
+                sections.forEach(section => {
+                    if (sugarType === 'all' || section.dataset.sugarType === sugarType) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Evento para cambiar el filtro
+            sugarFilter.addEventListener('change', function() {
+                filterBySugarType(this.value);
+            });
+            
+            // Función para ordenar alimentos por porcentaje
+            function sortFoodsByPercentage(containerId, ascending = true) {
+                const container = document.querySelector(`#${containerId} .food-grid`);
+                if (!container) return;
+                
+                const items = Array.from(container.querySelectorAll('.food-card'));
+                
+                items.sort((a, b) => {
+                    const aValue = parseFloat(a.dataset.percentage) || 0;
+                    const bValue = parseFloat(b.dataset.percentage) || 0;
+                    
+                    return ascending ? aValue - bValue : bValue - aValue;
+                });
+                
+                // Limpiar y reorganizar elementos
+                items.forEach(item => {
+                    container.appendChild(item);
+                });
+            }
+            
+            // Cargar datos dinámicamente si se necesita de una API
+            function loadNutritionalData() {
+                // Simulación de carga de datos (en una aplicación real, esto sería una llamada fetch a una API)
+                console.log('Datos nutricionales cargados');
+                
+                // Aquí iría el código para cargar datos de una API:
+                /*
+                fetch('api/nutritional-data.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Procesar y mostrar datos
+                        renderFoodItems(data);
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar datos:', error);
+                    });
+                */
+            }
+            
+            // Función para mostrar detalles adicionales al hacer clic
+            foodCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                    
+                    // Lógica para mostrar más detalles si se necesita
+                    const foodName = this.querySelector('h4').textContent;
+                    console.log(`Mostrando detalles de: ${foodName}`);
+                });
+            });
+            
+            // Inicialización
+            loadNutritionalData();
+            
+            // Ejemplo de cómo añadir nuevo contenido dinámicamente
+            function addNewFoodItem(section, foodData) {
+                const container = section.querySelector('.food-grid');
+                const newCard = document.createElement('div');
+                newCard.className = 'food-card';
+                newCard.setAttribute('role', 'listitem');
+                newCard.dataset.percentage = foodData.percentage;
+                
+                newCard.innerHTML = `
+                    <img src="${foodData.image}" alt="${foodData.name}" class="food-image" loading="lazy">
+                    <h4>${foodData.name}</h4>
+                    <p>${foodData.description}</p>
+                    <div class="food-details">
+                        <span class="percentage">${foodData.percentage}% de ${foodData.sugarType}</span>
+                    </div>
+                `;
+                
+                container.appendChild(newCard);
+                
+                // Añadir event listener al nuevo elemento
+                newCard.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            }
+            
+            // Exponer funciones al objeto global para posible uso desde consola o por otros scripts
+            window.foodUtils = {
+                addNewFoodItem,
+                sortFoodsByPercentage,
+                filterBySugarType
+            };
+        });
+    </script>
 </body>
 </html>

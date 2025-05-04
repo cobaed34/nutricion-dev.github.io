@@ -3,77 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información detallada sobre bioquímica, carbohidratos, proteínas y metabolismo">
     <title>Bioquímica - Detalles</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="biochem-container">
-        <nav class="breadcrumb">
-            <a href="index.html">← Volver a Nutrición</a>
+        <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+            <a href="index.html" aria-label="Volver a la página principal de Nutrición">← Volver a Nutrición</a>
         </nav>
 
-        <section id="monosacáridos" class="biochem-section">
-            <div class="seccion">
-                <h2> Estructura y Función</h2>
-                <h3>Características Principales</h3>
-                <ul>
-                    <li>Fórmula molecular general: (CH2O)n, donde n ≥ 3</li>
-                    <li>Son los carbohidratos más simples (no se pueden hidrolizar; la hidrólisis es el proceso químico mediante el cual se descomponen compuestos en presencia de agua).</li>
-                    <li>Tienen sabor dulce algunos </li>
-                    <li>Son solubles en agua</li>
+        <main>
+            <!-- SECCIÓN MONOSACÁRIDOS -->
+            <section id="monosacáridos" class="biochem-section">
+                <header>
+                    <h2>Estructura y Función</h2>
+                </header>
+                
+                <div class="seccion">
+                    <h3>Características Principales</h3>
+                    <ul>
+                        <li>Fórmula molecular general: (CH<sub>2</sub>O)<sub>n</sub>, donde n ≥ 3</li>
+                        <li>Son los carbohidratos más simples (no se pueden hidrolizar; la hidrólisis es el proceso químico mediante el cual se descomponen compuestos en presencia de agua).</li>
+                        <li>Tienen sabor dulce algunos</li>
+                        <li>Son solubles en agua</li>
+                    </ul>
                     
-                </ul>
-                <h3>Clasificación por número de carbonos</h3>
-                <p>Los monosacáridos se clasifican según el número de átomos de carbono en su cadena:</p>
-                <div class="tabla-container">
-                    <table class="tabla-clasificacion">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>N° Carbonos</th>
-                            <th>Ejemplos</th>
-                            <th>Importancia Biológica</th>
-                        </tr>
-                        <tr>
-                            <td>Triosas</td>
-                            <td>3</td>
-                            <td>Gliceraldehído, Dihidroxiacetona</td>
-                            <td>Intermediarios en la glucólisis</td>
-                        </tr>
-                        <tr>
-                            <td>Tetrosas</td>
-                            <td>4</td>
-                            <td>Eritrosa, Treosa</td>
-                            <td>Intermediarios metabólicos</td>
-                        </tr>
-                        <tr>
-                            <td>Pentosas</td>
-                            <td>5</td>
-                            <td>Ribosa, Desoxirribosa</td>
-                            <td>Componentes de ácidos nucleicos</td>
-                        </tr>
-                        <tr>
-                            <td>Hexosas</td>
-                            <td>6</td>
-                            <td>Glucosa, Fructosa, Galactosa</td>
-                            <td>Principal fuente de energía</td>
-                        </tr>
-                        <tr>
-                            <td>Heptosas</td>
-                            <td>7</td>
-                            <td>Sedoheptulosa</td>
-                            <td>Ciclo de las pentosas fosfato</td>
-                        </tr>
-                    </table>
+                    <h3>Clasificación por número de carbonos</h3>
+                    <p>Los monosacáridos se clasifican según el número de átomos de carbono en su cadena:</p>
+                    <div class="tabla-container">
+                        <table class="tabla-clasificacion">
+                            <caption>Clasificación de Monosacáridos</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">N° Carbonos</th>
+                                    <th scope="col">Ejemplos</th>
+                                    <th scope="col">Importancia Biológica</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Triosas</td>
+                                    <td>3</td>
+                                    <td>Gliceraldehído, Dihidroxiacetona</td>
+                                    <td>Intermediarios en la glucólisis</td>
+                                </tr>
+                                <tr>
+                                    <td>Tetrosas</td>
+                                    <td>4</td>
+                                    <td>Eritrosa, Treosa</td>
+                                    <td>Intermediarios metabólicos</td>
+                                </tr>
+                                <tr>
+                                    <td>Pentosas</td>
+                                    <td>5</td>
+                                    <td>Ribosa, Desoxirribosa</td>
+                                    <td>Componentes de ácidos nucleicos</td>
+                                </tr>
+                                <tr>
+                                    <td>Hexosas</td>
+                                    <td>6</td>
+                                    <td>Glucosa, Fructosa, Galactosa</td>
+                                    <td>Principal fuente de energía</td>
+                                </tr>
+                                <tr>
+                                    <td>Heptosas</td>
+                                    <td>7</td>
+                                    <td>Sedoheptulosa</td>
+                                    <td>Ciclo de las pentosas fosfato</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            
+                
                 <div class="accordion">
                     <div class="accordion-item">
-                        <button class="accordion-button">
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-lineal">
                             Estructura Lineal
-                            <span class="accordion-icon">+</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content">
+                        <div class="accordion-content" id="panel-lineal" aria-hidden="true">
                             <p>La estructura lineal de los monosacáridos presenta:</p>
                             <ul>
                                 <li>Cadena abierta de carbonos numerados de arriba hacia abajo</li>
@@ -82,20 +94,21 @@
                                         <li>Aldosas: grupo aldehído (-CHO) en el C1</li>
                                         <li>Cetosas: grupo cetona (C=O) generalmente en el C2</li>
                                     </ul>
-                                
-                               
+                                </li>
                             </ul>
-                            <img src="img/estructura_lineal.jpg" alt="Estructura lineal de glucosa" class="imagen-bioquimica">
-                            <p class="imagen-descripcion">Ejemplo: Estructura lineal de la D-glucosa en proyección de Fischer</p>
+                            <figure>
+                                <img src="img/dl.png" alt="Estructura lineal de glucosa" class="imagen-bioquimica" loading="lazy">
+                                <figcaption>Ejemplo: Estructura lineal de la D-glucosa en proyección de Fischer</figcaption>
+                            </figure>
                         </div>
                     </div>
 
                     <div class="accordion-item">
-                        <button class="accordion-button">
+                        <button class="accordion-button" aria-expanded="false" aria-controls="panel-ciclica">
                             Estructura Cíclica
-                            <span class="accordion-icon">+</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="accordion-content">
+                        <div class="accordion-content" id="panel-ciclica" aria-hidden="true">
                             <p>La estructura cíclica (hemiacetal o hemicetal) se forma cuando:</p>
                             <ul>
                                 <li>El grupo aldehído o cetona reacciona con un -OH de la misma molécula</li>
@@ -117,480 +130,311 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <img src="img/estructura_ciclica.webp" alt="Estructura cíclica de glucosa" class="imagen-bioquimica" width="400" height="300">
-                            <p class="imagen-descripcion">Formación del anillo y anómeros α/β de la D-glucosa</p>
+                            <figure>
+                                <img src="img/estructura_ciclica.webp" alt="Estructura cíclica de glucosa" class="imagen-bioquimica" width="400" height="300" loading="lazy">
+                                <figcaption>Formación del anillo y anómeros α/β de la D-glucosa</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
                 
-               
-            <h3>Tipos Principales</h3>
-            <div class="molecule-grid">
-                <div class="molecule-card">
-                    <h4>Glucosa (C₆H₁₂O₆)</h4>
-                    <img src="img/glucosa.webp" alt="Estructura de la glucosa" class="imagen-bioquimica" width="300" height="200">
-                    <ul>
-                        <li>Principal fuente de energía celular</li>
-                    </ul>
-                </div>
-             
-            </div>
-
-            <h3>Reacciones Bioquímicas</h3>
-            <div class="reaction-diagram">
-           
-            </div>
-        </section>
-
-        <section id="disacáridos" class="biochem-section">
-            <h2>Disacáridos: Estructura y Función</h2>
-            <div class="info-card">
-                <h3>Características Principales</h3>
-                <ul>
-                    <li>Formados por dos monosacáridos unidos por enlace glucosídico</li>
-                    <li>Requieren hidrólisis enzimática para su absorción</li>
-                </ul>
-
                 <h3>Tipos Principales</h3>
                 <div class="molecule-grid">
                     <div class="molecule-card">
-                        <h4>Sacarosa (Glucosa + Fructosa)</h4>
-                        <img src="img/sacarosa.svg" alt="Estructura de la sacarosa">
+                        <h4>Glucosa (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>)</h4>
+                        <img src="img/glucosa.webp" alt="Estructura de la glucosa" class="imagen-bioquimica" width="300" height="200" loading="lazy">
                         <ul>
-                            <li>Azúcar de mesa común</li>
-                            <li>Hidrolizada por sacarasa</li>
-                        </ul>
-                        <a href="comida.html" class="ver-comidas">Ver alimentos con Sacarosa</a>
-                    </div>
-                    <div class="molecule-card">
-                        <h4>Lactosa (Glucosa + Galactosa)</h4>
-                        <img src="img/lactosa.webp" alt="Estructura de la lactosa">
-                        <ul>
-                            <li>Azúcar de la leche</li>
-                            <li>Hidrolizada por lactasa</li>
-                        </ul>
-                        <div class="related-link">
-                            <a href="comida.html#lactosa-heading" class="ver-comidas">Ver alimentos con Lactosa →</a>
-                        </div>
-                    </div>
-                    <div class="molecule-card">
-                        <h4>Maltosa (Glucosa + Glucosa)</h4>
-                        <img src="img/maltosa.webp" alt="Estructura de la maltosa">
-                        <ul>
-                            <li>Producto de digestión del almidón</li>
-                            <li>Hidrolizada por maltasa</li>
+                            <li>Principal fuente de energía celular</li>
                         </ul>
                     </div>
                 </div>
+            </section>
 
-              
-
-        <section id="polisacáridos" class="biochem-section">
-            <h2>Polisacáridos: Estructura y Función</h2>
-            <div class="info-card">
-                <h3>Características Principales</h3>
-                <ul>
-                    <li>Cadenas largas de monosacáridos</li>
-                    <li>Función de almacenamiento y estructura</li>
-                    <li>Alta complejidad molecular</li>
-                </ul>
-
-                <h3>Tipos Principales</h3>
-                <div class="molecule-grid">
-                    <div class="molecule-card">
-                        <h4>Almidón</h4>
-                        <img src="img/almidon.webp" alt="Estructura del almidón">
-                        <ul>
-                            <li>Reserva energética en plantas</li>
-                        </ul>
-                    </div>
-                    <div class="molecule-card">
-                        <h4>Glucógeno</h4>
-                        <img src="img/glucogeno.webp" alt="Estructura del glucógeno">
-                        <ul>
-                            <li>Reserva energética en animales</li>
-                            <li>Estructura altamente ramificada</li>
-                            <li>Almacenado en hígado y músculo</li>
-                        </ul>
-                    </div>
-                    <div class="molecule-card">
-                        <h4>Celulosa</h4>
-                        <img src="img/celulosa.webp" alt="Estructura de la celulosa">
-                        <ul>
-                            <li>Componente estructural en plantas</li>
-                            
-                            <li>No digerible por humanos</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3>Importancia Biológica</h3>
-                <div class="function-diagram">
-                    <h4>Funciones Principales</h4>
+            <!-- SECCIÓN DISACÁRIDOS -->
+            <section id="disacáridos" class="biochem-section">
+                <header>
+                    <h2>Disacáridos: Estructura y Función</h2>
+                </header>
+                
+                <div class="info-card">
+                    <h3>Características Principales</h3>
                     <ul>
-                        <li>Almacenamiento de energía</li>
-                        <li>Soporte estructural</li>
-                        <li>Fibra dietética</li>
+                        <li>Formados por dos monosacáridos unidos por enlace glucosídico</li>
+                        <li>Requieren hidrólisis enzimática para su absorción</li>
                     </ul>
-                    
-                    <h4>Metabolismo</h4>
+
+                    <h3>Tipos Principales</h3>
+                    <div class="molecule-grid">
+                        <div class="molecule-card" id="sacarosa-card">
+                            <h4>Sacarosa (Glucosa + Fructosa)</h4>
+                            <img src="img/sacarosa.svg" alt="Estructura de la sacarosa" loading="lazy">
+                            <ul>
+                                <li>Azúcar de mesa común</li>
+                                <li>Hidrolizada por sacarasa</li>
+                            </ul>
+                            <a href="comida.html" class="ver-comidas">Ver alimentos con Sacarosa</a>
+                        </div>
+                        <div class="molecule-card" id="lactosa-card">
+                            <h4>Lactosa (Glucosa + Galactosa)</h4>
+                            <img src="img/lactosa.webp" alt="Estructura de la lactosa" loading="lazy">
+                            <ul>
+                                <li>Azúcar de la leche</li>
+                                <li>Hidrolizada por lactasa</li>
+                            </ul>
+                            <div class="related-link">
+                                <a href="comida.html#lactosa-heading" class="ver-comidas">Ver alimentos con Lactosa →</a>
+                            </div>
+                        </div>
+                        <div class="molecule-card" id="maltosa-card">
+                            <h4>Maltosa (Glucosa + Glucosa)</h4>
+                            <img src="img/maltosa.webp" alt="Estructura de la maltosa" loading="lazy">
+                            <ul>
+                                <li>Producto de digestión del almidón</li>
+                                <li>Hidrolizada por maltasa</li>
+                            </ul>
+                            <div class="related-link">
+                                <a href="comida.html#maltosa-heading" class="ver-comidas">Ver alimentos con Maltosa →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN POLISACÁRIDOS -->
+            <section id="polisacáridos" class="biochem-section">
+                <header>
+                    <h2>Polisacáridos: Estructura y Función</h2>
+                </header>
+                
+                <div class="info-card">
+                    <h3>Características Principales</h3>
                     <ul>
-                        <li>Digestión enzimática gradual</li>
-                        <li>Regulación hormonal</li>
-                        <li>Homeostasis de la glucosa</li>
+                        <li>Cadenas largas de monosacáridos</li>
+                        <li>Función de almacenamiento y estructura</li>
+                        <li>Alta complejidad molecular</li>
                     </ul>
+
+                    <h3>Tipos Principales</h3>
+                    <div class="molecule-grid">
+                        <div class="molecule-card" id="almidon-card">
+                            <h4>Almidón</h4>
+                            <img src="img/almidon.webp" alt="Estructura del almidón" loading="lazy">
+                            <ul>
+                                <li>Reserva energética en plantas</li>
+                            </ul>
+                        </div>
+                        <div class="molecule-card" id="glucogeno-card">
+                            <h4>Glucógeno</h4>
+                            <img src="img/glucogeno.webp" alt="Estructura del glucógeno" loading="lazy">
+                            <ul>
+                                <li>Reserva energética en animales</li>
+                                <li>Estructura altamente ramificada</li>
+                                <li>Almacenado en hígado y músculo</li>
+                            </ul>
+                        </div>
+                        <div class="molecule-card" id="celulosa-card">
+                            <h4>Celulosa</h4>
+                            <img src="img/celulosa.webp" alt="Estructura de la celulosa" loading="lazy">
+                            <ul>
+                                <li>Componente estructural en plantas</li>
+                                <li>No digerible por humanos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Importancia Biológica</h3>
+                    <div class="function-diagram">
+                        <h4>Funciones Principales</h4>
+                        <ul>
+                            <li>Almacenamiento de energía</li>
+                            <li>Soporte estructural</li>
+                            <li>Fibra dietética</li>
+                        </ul>
+                        
+                        <h4>Metabolismo</h4>
+                        <ul>
+                            <li>Digestión enzimática gradual</li>
+                            <li>Regulación hormonal</li>
+                            <li>Homeostasis de la glucosa</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="proteinas" class="biochem-section">
-            <h2>Proteínas: Estructura y Función</h2>
-            <div class="info-card">
-                <h3>Características Principales</h3>
-                <ul>
-                    <li>Polímeros de aminoácidos unidos por enlaces peptídicos</li>
-                    <li>Función estructural, enzimática, transporte y regulación</li>
-                    <li>20 aminoácidos estándar (9 esenciales)</li>
-                    <li>Estructura jerárquica (primaria a cuaternaria)</li>
-                </ul>
+            <!-- SECCIÓN PROTEÍNAS -->
+            <section id="proteinas" class="biochem-section">
+                <header>
+                    <h2>Proteínas: Estructura y Función</h2>
+                </header>
+                
+                <div class="info-card">
+                    <h3>Características Principales</h3>
+                    <ul>
+                        <li>Polímeros de aminoácidos unidos por enlaces peptídicos</li>
+                        <li>Función estructural, enzimática, transporte y regulación</li>
+                        <li>20 aminoácidos estándar (9 esenciales)</li>
+                        <li>Estructura jerárquica (primaria a cuaternaria)</li>
+                    </ul>
 
-                <h3>Aminoácidos</h3>
-                <div class="amino-groups">
-                    <div class="amino-category">
-                        <h4>Aminoácidos Esenciales</h4>
-                        <div class="molecule-grid">
-                            <div class="molecule-card">
-                                <h4>Histidina (His)</h4>
-                                <img src="img/histidina.png" alt="Estructura de la Histidina">
-                                <ul>
-                                    <li>Grupo imidazol</li>
-                                    <li>pKa = 6.0</li>
-                                    <li>Función en catálisis enzimática</li>
-                                </ul>
+                    <h3>Aminoácidos</h3>
+                    <div class="amino-groups">
+                        <div class="amino-category">
+                            <h4>Aminoácidos Esenciales</h4>
+                            <div class="molecule-grid" id="essential-amino-grid">
+                                <!-- Aquí comienzan las tarjetas de aminoácidos esenciales -->
+                                <div class="molecule-card" id="histidina-card">
+                                    <h4>Histidina (His)</h4>
+                                    <img src="img/histidina.png" alt="Estructura de la Histidina" loading="lazy">
+                                    <ul>
+                                        <li>Grupo imidazol</li>
+                                        <li>pKa = 6.0</li>
+                                        <li>Función en catálisis enzimática</li>
+                                    </ul>
+                                </div>
+                                <!-- Más tarjetas de aminoácidos esenciales -->
                             </div>
-                            <div class="molecule-card">
-                                <h4>Isoleucina (Ile)</h4>
-                                <img src="img/isoleucina.webp" alt="Estructura de la Isoleucina">
-                                <ul>
-                                    <li>Aminoácido ramificado</li>
-                                    <li>Hidrofóbico</li>
-                                    <li>Importante en estructura proteica</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Leucina (Leu)</h4>
-                                <img src="img/leucina.jpeg" alt="Estructura de la Leucina">
-                                <ul>
-                                    <li>Aminoácido ramificado</li>
-                                    <li>Señalización celular</li>
-                                    <li>Síntesis proteica muscular</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Lisina (Lys)</h4>
-                                <img src="img/lisina.webp" alt="Estructura de la Lisina">
-                                <ul>
-                                    <li>Carga positiva a pH fisiológico</li>
-                                    <li>Modificaciones post-traduccionales</li>
-                                    <li>Interacción con ADN</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Metionina (Met)</h4>
-                                <img src="img/metionina.webp" alt="Estructura de la Metionina">
-                                <ul>
-                                    <li>Contiene azufre</li>
-                                    <li>Inicio de síntesis proteica</li>
-                                    <li>Donador de grupos metilo</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Fenilalanina (Phe)</h4>
-                                <img src="img/fenilalanina.webp" alt="Estructura de la Fenilalanina">
-                                <ul>
-                                    <li>Anillo aromático</li>
-                                    <li>Precursor de tirosina</li>
-                                    <li>Hidrofóbico</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Treonina (Thr)</h4>
-                                <img src="img/Treonina.webp" alt="Estructura de la Treonina">
-                                <ul>
-                                    <li>Grupo hidroxilo</li>
-                                    <li>Fosforilación</li>
-                                    <li>Glicosilación</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Triptófano (Trp)</h4>
-                                <img src="img/triptofano.webp" alt="Estructura del Triptófano">
-                                <ul>
-                                    <li>Indol aromático</li>
-                                    <li>Precursor de serotonina</li>
-                                    <li>Fluorescencia intrínseca</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Valina (Val)</h4>
-                                <img src="img/valina.webp" alt="Estructura de la Valina">
-                                <ul>
-                                    <li>Aminoácido ramificado</li>
-                                    <li>Metabolismo energético</li>
-                                    <li>Estructura proteica</li>
-                                </ul>
+                        </div>
+
+                        <div class="amino-category">
+                            <h4>Aminoácidos No Esenciales</h4>
+                            <div class="molecule-grid" id="non-essential-amino-grid">
+                                <!-- Aquí comienzan las tarjetas de aminoácidos no esenciales -->
+                                <div class="molecule-card" id="alanina-card">
+                                    <h4>Alanina (Ala)</h4>
+                                    <img src="img/alanina.webp" alt="Estructura de la Alanina" loading="lazy">
+                                    <ul>
+                                        <li>Pequeño y no polar</li>
+                                        <li>Gluconeogénesis</li>
+                                    </ul>
+                                </div>
+                                <!-- Más tarjetas de aminoácidos no esenciales -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="amino-category">
-                        <h4>Aminoácidos No Esenciales</h4>
-                        <div class="molecule-grid">
-                            <div class="molecule-card">
-                                <h4>Alanina (Ala)</h4>
-                                <img src="img/alanina.webp" alt="Estructura de la Alanina">
-                                <ul>
-                                    <li>Pequeño y no polar</li>
-                                    <li>Gluconeogénesis</li>
-                                   
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Arginina (Arg)</h4>
-                                <img src="img/arginina.webp" alt="Estructura de la Arginina">
-                                <ul>
-                                    <li>Carga positiva</li>
-                                    <li>Ciclo de la urea</li>
-                                    <li>Síntesis de óxido nítrico</li>
-                                </ul>
-                            </div>
-                            <div class="molecule-card">
-                                <h4>Asparagina (Asn)</h4>
-                                <img src="img/asparagina.jpeg" alt="Estructura de la Asparagina">
-                                <ul>
-                                    <li>Grupo amida</li>
-                                    <li>N-glicosilación</li>
-                                    <li>Transporte de NH3</li>
-                                </ul>
-                            </div>
-                          
+                    <h3>Niveles Estructurales</h3>
+                    <div class="structure-levels">
+                        <div class="level-card" id="estructura-primaria">
+                            <h4>Estructura Primaria</h4>
+                            <p>Secuencia lineal de aminoácidos unidos por enlaces peptídicos.</p>
+                            <img src="img/estructura_primaria.webp" alt="Estructura primaria de proteínas" loading="lazy">
+                        </div>
+                        <div class="level-card" id="estructura-secundaria">
+                            <h4>Estructura Secundaria</h4>
+                            <p>Conformaciones regulares locales (α-hélice, β-lámina).</p>
+                            <img src="img/estructura_secundaria.webp" alt="Estructura secundaria de proteínas" loading="lazy">
+                        </div>
+                        <div class="level-card" id="estructura-terciaria">
+                            <h4>Estructura Terciaria</h4>
+                            <p>Plegamiento tridimensional de la cadena polipeptídica.</p>
+                            <img src="img/estructura_terciaria.webp" alt="Estructura terciaria de proteínas" loading="lazy">
+                        </div>
+                        <div class="level-card" id="estructura-cuaternaria">
+                            <h4>Estructura Cuaternaria</h4>
+                            <p>Asociación de múltiples cadenas polipeptídicas.</p>
+                            <img src="img/estructura_cuaternaria.webp" alt="Estructura cuaternaria de proteínas" width="400" height="200" loading="lazy">
                         </div>
                     </div>
+
+                    <h3>Metabolismo y Síntesis</h3>
+                    <div class="reaction-diagram">
+                        <h4>1. Síntesis Proteica</h4>
+                        <p>
+                            La síntesis de proteínas es un proceso complejo que ocurre en los ribosomas, siguiendo la información genética del ADN.
+                        </p>
+                        <ul>
+                            <li><strong>Transcripción:</strong>
+                                <ul>
+                                    <li>ADN → ARN mensajero</li>
+                                    <li>Regulación génica</li>
+                                    <li>Procesamiento del ARNm</li>
+                                </ul>
+                            </li>
+                            <li><strong>Traducción:</strong>
+                                <ul>
+                                    <li>Iniciación</li>
+                                    <li>Elongación</li>
+                                    <li>Terminación</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>2. Modificaciones Post-traduccionales</h4>
+                        <ul>
+                            <li>Fosforilación</li>
+                            <li>Glicosilación</li>
+                            <li>Ubiquitinación</li>
+                            <li>Acetilación</li>
+                        </ul>
+                    </div>
                 </div>
+            </section>
 
-                <h3>Niveles Estructurales</h3>
-                <div class="structure-levels">
-                    <div class="level-card">
-                        <h4>Estructura Primaria</h4>
-                        <p>Secuencia lineal de aminoácidos unidos por enlaces peptídicos.</p>
-                        <img src="img/estructura_primaria.webp" alt="Estructura primaria de proteínas">
-                    </div>
-                    <div class="level-card">
-                        <h4>Estructura Secundaria</h4>
-                        <p>Conformaciones regulares locales (α-hélice, β-lámina).</p>
-                        <img src="img/estructura_secundaria.webp" alt="Estructura secundaria de proteínas">
-                    </div>
-                    <div class="level-card">
-                        <h4>Estructura Terciaria</h4>
-                        <p>Plegamiento tridimensional de la cadena polipeptídica.</p>
-                        <img src="img/estructura_terciaria.webp" alt="Estructura terciaria de proteínas">
-                    </div>
-                    <div class="level-card">
-                        <h4>Estructura Cuaternaria</h4>
-                        <p>Asociación de múltiples cadenas polipeptídicas.</p>
-                        <img src="img/estructura_cuaternaria.webp" alt="Estructura cuaternaria de proteínas" width="400" height="200">
-                    </div>
-                    
-                   
-
-                <h3>Metabolismo y Síntesis</h3>
+            <!-- SECCIÓN METABOLISMO -->
+            <section id="metabolismo" class="biochem-section">
+                <header>
+                    <h2>Metabolismo y Absorción</h2>
+                </header>
+                
                 <div class="reaction-diagram">
-                    <h4>1. Síntesis Proteica</h4>
+                    <h4>1. Digestión: Procesamiento de los Carbohidratos</h4>
                     <p>
-                        La síntesis de proteínas es un proceso complejo que ocurre en los ribosomas, siguiendo la información genética del ADN.
+                        La digestión de los carbohidratos es un proceso enzimático secuencial que ocurre en diferentes partes del sistema digestivo.
+                        Su objetivo principal es descomponer los polisacáridos y disacáridos en monosacáridos para su absorción.
                     </p>
                     <ul>
-                        <li><strong>Transcripción:</strong>
+                        <li><strong>Fase Oral:</strong>
                             <ul>
-                                <li>ADN → ARN mensajero</li>
-                                <li>Regulación génica</li>
-                                <li>Procesamiento del ARNm</li>
+                                <li><strong>Enzima clave:</strong> Amilasa salival (ptialina), encargada de iniciar la digestión de los almidones.</li>
+                                <li><strong>pH óptimo:</strong> 6.7 - 7.0, adecuado para su actividad en la boca.</li>
+                                <li>Hidroliza enlaces α-1,4 del almidón, descomponiéndolo en moléculas más pequeñas como maltosa y dextrinas.</li>
                             </ul>
                         </li>
-                        <li><strong>Traducción:</strong>
+                        <li><strong>Fase Gástrica:</strong>
                             <ul>
-                                <li>Iniciación</li>
-                                <li>Elongación</li>
-                                <li>Terminación</li>
+                                <li>pH ácido (≈ 2.0) inactiva amilasa salival, deteniendo la digestión del almidón.</li>
+                                <li>No hay digestión significativa de carbohidratos en esta fase.</li>
                             </ul>
                         </li>
-                    </ul>
-
-                    <h4>2. Modificaciones Post-traduccionales</h4>
-                    <ul>
-                        <li>Fosforilación</li>
-                        <li>Glicosilación</li>
-                        <li>Ubiquitinación</li>
-                        <li>Acetilación</li>
-                    </ul>
-
-                    <h4>3. Degradación Proteica</h4>
-                    <ul>
-                        <li><strong>Sistema Ubiquitina-Proteasoma:</strong>
+                        <li><strong>Fase Intestinal:</strong>
                             <ul>
-                                <li>Marcaje de proteínas</li>
-                                <li>Degradación controlada</li>
-                                <li>Reciclaje de aminoácidos</li>
-                            </ul>
-                        </li>
-                        <li><strong>Autofagia:</strong>
-                            <ul>
-                                <li>Degradación lisosomal</li>
-                                <li>Respuesta al estrés</li>
-                                <li>Homeostasis celular</li>
+                                <li><strong>Amilasa pancreática:</strong> Continúa la digestión de polisacáridos en el intestino delgado.</li>
+                                <li><strong>Enzimas del borde en cepillo:</strong> Descomponen disacáridos en monosacáridos para su absorción:
+                                    <ul>
+                                        <li><strong>Maltasa:</strong> Convierte maltosa en glucosa.</li>
+                                        <li><strong>Sacarasa:</strong> Descompone sacarosa en glucosa y fructosa.</li>
+                                        <li><strong>Lactasa:</strong> Convierte lactosa en glucosa y galactosa.</li>
+                                        <li><strong>Isomaltasa:</strong> Actúa sobre los enlaces α-1,6 de la amilopectina.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
-
-                    <h4>4. Regulación Metabólica</h4>
+                
+                    <h4>2. Absorción de Monosacáridos</h4>
+                    <p>
+                        Una vez descompuestos en monosacáridos, los carbohidratos son absorbidos por los enterocitos del intestino delgado 
+                        mediante transportadores específicos.
+                    </p>
                     <ul>
-                        <li><strong>Control Transcripcional:</strong>
+                        <li><strong>Transportadores:</strong>
                             <ul>
-                                <li>Factores de transcripción</li>
-                                <li>Modificaciones epigenéticas</li>
-                                <li>Señalización celular</li>
+                                <li><strong>SGLT1:</strong> Cotransporte activo de glucosa y galactosa junto con sodio.</li>
+                                <li><strong>GLUT2:</strong> Transporte facilitado de glucosa y galactosa hacia la sangre.</li>
+                                <li><strong>GLUT5:</strong> Específico para la absorción de fructosa.</li>
                             </ul>
                         </li>
-                        <li><strong>Control Traduccional:</strong>
+                        <li><strong>Factores reguladores:</strong>
                             <ul>
-                                <li>Disponibilidad de aminoácidos</li>
-                                <li>Estado energético celular</li>
-                                <li>Factores de iniciación</li>
+                                <li>Expresión de transportadores en respuesta a la demanda energética.</li>
+                                <li>Regulación hormonal (insulina/glucagón) para mantener niveles adecuados de glucosa.</li>
+                                <li>Estado nutricional, que influye en la eficiencia de absorción.</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </section>
-        <h3>Metabolismo y Absorción</h3>
-        <div class="reaction-diagram">
-            <h4>1. Digestión: Procesamiento de los Carbohidratos</h4>
-            <p>
-                La digestión de los carbohidratos es un proceso enzimático secuencial que ocurre en diferentes partes del sistema digestivo.
-                Su objetivo principal es descomponer los polisacáridos y disacáridos en monosacáridos para su absorción.
-            </p>
-            <ul>
-                <li><strong>Fase Oral:</strong>
-                    <ul>
-                        <li><strong>Enzima clave:</strong> Amilasa salival (ptialina), encargada de iniciar la digestión de los almidones.</li>
-                        <li><strong>pH óptimo:</strong> 6.7 - 7.0, adecuado para su actividad en la boca.</li>
-                        <li>Hidroliza enlaces α-1,4 del almidón, descomponiéndolo en moléculas más pequeñas como maltosa y dextrinas.</li>
-                    </ul>
-                </li>
-                <li><strong>Fase Gástrica:</strong>
-                    <ul>
-                        <li>pH ácido (≈ 2.0) inactiva amilasa salival, deteniendo la digestión del almidón.</li>
-                        <li>No hay digestión significativa de carbohidratos en esta fase.</li>
-                    </ul>
-                </li>
-                <li><strong>Fase Intestinal:</strong>
-                    <ul>
-                        <li><strong>Amilasa pancreática:</strong> Continúa la digestión de polisacáridos en el intestino delgado.</li>
-                        <li><strong>Enzimas del borde en cepillo:</strong> Descomponen disacáridos en monosacáridos para su absorción:
-                            <ul>
-                                <li><strong>Maltasa:</strong> Convierte maltosa en glucosa.</li>
-                                <li><strong>Sacarasa:</strong> Descompone sacarosa en glucosa y fructosa.</li>
-                                <li><strong>Lactasa:</strong> Convierte lactosa en glucosa y galactosa.</li>
-                                <li><strong>Isomaltasa:</strong> Actúa sobre los enlaces α-1,6 de la amilopectina.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        
-            <h4>2. Absorción de Monosacáridos</h4>
-            <p>
-                Una vez descompuestos en monosacáridos, los carbohidratos son absorbidos por los enterocitos del intestino delgado 
-                mediante transportadores específicos.
-            </p>
-            <ul>
-                <li><strong>Transportadores:</strong>
-                    <ul>
-                        <li><strong>SGLT1:</strong> Cotransporte activo de glucosa y galactosa junto con sodio.</li>
-                        <li><strong>GLUT2:</strong> Transporte facilitado de glucosa y galactosa hacia la sangre.</li>
-                        <li><strong>GLUT5:</strong> Específico para la absorción de fructosa.</li>
-                    </ul>
-                </li>
-                <li><strong>Factores reguladores:</strong>
-                    <ul>
-                        <li>Expresión de transportadores en respuesta a la demanda energética.</li>
-                        <li>Regulación hormonal (insulina/glucagón) para mantener niveles adecuados de glucosa.</li>
-                        <li>Estado nutricional, que influye en la eficiencia de absorción.</li>
-                    </ul>
-                </li>
-            </ul>
-        
-            <h4>3. Metabolismo Celular</h4>
-            <p>
-                Una vez en la célula, la glucosa puede seguir distintas rutas metabólicas dependiendo de las necesidades energéticas del organismo.
-            </p>
-            <ul>
-                <li><strong>Glucólisis:</strong> Proceso metabólico que convierte la glucosa en piruvato para la producción de energía.
-                    <ul>
-                        <li>Ocurre en el citoplasma de la célula.</li>
-                        <li>Consiste en 10 reacciones enzimáticas.</li>
-                        <li>Producción: 2 ATP (energía) + 2 NADH (coenzima para más producción de energía).</li>
-                        <li><strong>Enzimas clave:</strong>
-                            <ul>
-                                <li><strong>Hexokinasa/Glucokinasa:</strong> Fosforila la glucosa para atraparla dentro de la célula.</li>
-                                <li><strong>Fosfofructokinasa-1 (PFK-1):</strong> Regula el ritmo de la glucólisis.</li>
-                                <li><strong>Piruvato kinasa:</strong> Cataliza el paso final de la glucólisis, generando piruvato.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Gluconeogénesis:</strong> Síntesis de glucosa en condiciones de ayuno para mantener la homeostasis.
-                    <ul>
-                        <li>Utiliza sustratos como piruvato, lactato, aminoácidos glucogénicos y glicerol.</li>
-                        <li>Es regulada por hormonas como el glucagón.</li>
-                    </ul>
-                </li>
-            </ul>
-        
-            <h4>4. Regulación Hormonal</h4>
-            <p>
-                El metabolismo de los carbohidratos está finamente regulado por hormonas que mantienen la homeostasis de la glucosa.
-            </p>
-            <ul>
-                <li><strong>Insulina:</strong> Hormona anabólica que promueve el almacenamiento de energía.
-                    <ul>
-                        <li><strong>Vía de señalización:</strong>
-                            <ul>
-                                <li><strong>PI3K/AKT:</strong> Facilita la translocación de GLUT4 para la captación de glucosa.</li>
-                                <li><strong>GSK3:</strong> Activa la síntesis de glucógeno.</li>
-                                <li><strong>mTOR:</strong> Estimula la síntesis de proteínas.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Efectos:</strong>
-                            <ul>
-                                <li>Favorece el almacenamiento de glucógeno en el hígado y los músculos.</li>
-                                <li>Estimula la lipogénesis (almacenamiento de grasas).</li>
-                                <li>Inhibe la gluconeogénesis para reducir la producción de glucosa endógena.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Incretinas:</strong> Hormonas intestinales que mejoran la respuesta a la glucosa.
-                    <ul>
-                        <li><strong>GLP-1:</strong> Aumenta la secreción de insulina, inhibe el glucagón y retrasa el vaciado gástrico.</li>
-                        <li><strong>GIP:</strong> Potencia la secreción de insulina y participa en el metabolismo óseo.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+            </section>
+        </main>
     </div>
-</section>
-    </div>
-    <script src="script.js"></script>
 </body>
-</html> 
+</html>
