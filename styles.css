@@ -12,6 +12,21 @@
     --border-radius: 16px;
 }
 
+/* Establece modelo de caja correcto en todos los elementos */
+* {
+    box-sizing: border-box;
+    max-width: 100%; /* Evita que elementos se desborden */
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -19,6 +34,10 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilos de encabezados */
@@ -129,33 +148,334 @@ tr:hover td {
     background-color: rgba(3, 64, 120, 0.05);
 }
 
-/* Estilos responsivos */
+/* Estilos responsivos mejorados */
 @media (max-width: 768px) {
-    .nutrient-section, .bioquimica {
-        padding: 2rem 1rem;
+    html {
+        font-size: 14px;
     }
 
-    h2 {
-        font-size: 1.8em;
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .biochem-container {
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .biochem-section {
+        padding: 1rem;
+        margin: 1rem 0;
+        width: 100%;
     }
 
     .info-card {
-        padding: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 8px;
     }
 
-    .image-container {
-        width: 80%;
+    .molecule-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .molecule-card {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .molecule-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .food-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .food-image {
+        height: 150px;
+    }
+
+    .tabla-container {
+        overflow-x: auto;
+        margin: 1rem 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabla-clasificacion {
+        font-size: 0.9rem;
+    }
+
+    .tabla-clasificacion th,
+    .tabla-clasificacion td {
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .accordion-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        padding: 0.5rem;
+    }
+
+    .ver-comidas {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .reaction-diagram {
+        padding: 1rem;
+    }
+
+    .reaction-diagram ul {
+        padding-left: 1rem;
+    }
+
+    .reaction-diagram li {
+        margin-bottom: 0.5rem;
+    }
+
+    .breadcrumb {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .breadcrumb a {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        padding: 0 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 0.8rem 0;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        margin: 0.6rem 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .biochem-container {
+        padding: 0.3rem;
+    }
+
+    .biochem-section {
+        padding: 0.8rem;
+    }
+
+    .info-card {
+        padding: 0.8rem;
+    }
+
+    .molecule-card {
+        padding: 0.8rem;
+    }
+
+    .food-card {
+        padding: 0.8rem;
+    }
+
+    .tabla-clasificacion {
+        font-size: 0.8rem;
+    }
+
+    .tabla-clasificacion th,
+    .tabla-clasificacion td {
+        padding: 0.3rem;
+    }
+
+    .accordion-button {
+        padding: 0.8rem;
+    }
+
+    .accordion-content {
+        padding: 0.3rem;
+    }
+
+    .ver-comidas {
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
 /* Estilos de navegación */
-nav {
+.navbar {
     background: var(--primary-color);
-    padding: 1rem 0;
+    padding: 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.logo i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Estilos responsivos para navegación */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 1rem;
+        justify-content: flex-start;
+        border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        z-index: 1001;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        padding: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
