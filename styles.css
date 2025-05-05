@@ -332,11 +332,6 @@ tr:hover td {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
 .nav-toggle {
     display: none;
     cursor: pointer;
@@ -352,7 +347,7 @@ tr:hover td {
     }
 
     .nav-links {
-        display: none;
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
@@ -362,27 +357,14 @@ tr:hover td {
         padding: 1rem;
         gap: 0.5rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-links.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
+        display: flex !important;
     }
 
     .nav-links li {
         width: 100%;
-        opacity: 0;
-        transform: translateX(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-links.active li {
-        opacity: 1;
-        transform: translateX(0);
     }
 
     .nav-links a {
@@ -978,19 +960,179 @@ strong {
 /* Responsive */
 @media (max-width: 768px) {
     .biochem-container {
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .biochem-section {
         padding: 1rem;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .info-card {
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 8px;
     }
 
     .molecule-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .biochem-section h2 {
-        font-size: 1.8rem;
+    .molecule-card {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .molecule-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .food-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .food-image {
+        height: 150px;
+    }
+
+    .tabla-container {
+        overflow-x: auto;
+        margin: 1rem 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabla-clasificacion {
+        font-size: 0.9rem;
+    }
+
+    .tabla-clasificacion th,
+    .tabla-clasificacion td {
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .accordion-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        padding: 0.5rem;
+    }
+
+    .ver-comidas {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .reaction-diagram {
+        padding: 1rem;
+    }
+
+    .reaction-diagram ul {
+        padding-left: 1rem;
+    }
+
+    .reaction-diagram li {
+        margin-bottom: 0.5rem;
+    }
+
+    .breadcrumb {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .breadcrumb a {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        padding: 0 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 0.8rem 0;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        margin: 0.6rem 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .biochem-container {
+        padding: 0.3rem;
+    }
+
+    .biochem-section {
+        padding: 0.8rem;
     }
 
     .info-card {
-        padding: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    .molecule-card {
+        padding: 0.8rem;
+    }
+
+    .food-card {
+        padding: 0.8rem;
+    }
+
+    .tabla-clasificacion {
+        font-size: 0.8rem;
+    }
+
+    .tabla-clasificacion th,
+    .tabla-clasificacion td {
+        padding: 0.3rem;
+    }
+
+    .accordion-button {
+        padding: 0.8rem;
+    }
+
+    .accordion-content {
+        padding: 0.3rem;
+    }
+
+    .ver-comidas {
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
